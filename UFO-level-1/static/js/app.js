@@ -16,9 +16,11 @@ data.forEach(function(x) {
 
 // new date filter setup
 var button = d3.select("#filter-btn");
-
+  
 button.on("click", function()
 {
+    // Prevent the page from refreshing
+  d3.event.preventDefault();
     //clear the initial table
     tbody.text("");
     //use the new date to filter
